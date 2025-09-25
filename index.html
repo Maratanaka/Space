@@ -18,7 +18,6 @@
   </ul>
 </nav>
 
-
   <!-- Csillagos háttér -->
   <div id="starsContainer" class="relative w-full min-h-screen overflow-hidden">
     <div id="layer1" class="stars-layer layer-1"></div>
@@ -49,64 +48,66 @@
   </div>
 
   <div id="cardsSection" class="px-6 py-40 min-h-screen grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-  <!-- Kártya 1: Bolygók -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="planet.png" alt="Bolygók" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Bolygók</h3>
-      <p class="text-white/80">A Naprendszer bolygói és azok érdekességei.</p>
+    <!-- Kártya 1: Bolygók -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="planets">
+      <img src="planet.png" alt="Bolygók" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Bolygók</h3>
+        <p class="text-white/80">A Naprendszer bolygói és azok érdekességei.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
+    </div>
+
+    <!-- Kártya 2: Holdak -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="moons">
+      <img src="full-moon.png" alt="Holdak" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Holdak</h3>
+        <p class="text-white/80">A Föld és más bolygók holdjai, valamint felfedezésük.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
+    </div>
+
+    <!-- Kártya 3: Csillagok -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="stars">
+      <img src="star.png" alt="Csillagok" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Csillagok</h3>
+        <p class="text-white/80">Az égbolt fénylő csillagai és azok típusai.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
+    </div>
+
+    <!-- Kártya 4: Galaxisok -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="galaxies">
+      <img src="galaxy.png" alt="Galaxisok" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Galaxisok</h3>
+        <p class="text-white/80">Különböző galaxisok az univerzumban, például a Tejútrendszer.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
+    </div>
+
+    <!-- Kártya 5: Fekete lyukak -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="blackholes">
+      <img src="black-hole.png" alt="Fekete lyukak" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Fekete lyukak</h3>
+        <p class="text-white/80">Az univerzum legerősebb gravitációs objektumai.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
+    </div>
+
+    <!-- Kártya 6: Üstökösök -->
+    <div class="card bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center cursor-pointer" data-card="comets">
+      <img src="meteor.png" alt="Üstökösök" class="card-image w-56 h-56 object-contain transition-all duration-500">
+      <div class="card-content absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500">
+        <h3 class="text-2xl font-bold text-white mb-2">Üstökösök</h3>
+        <p class="text-white/80">Az üstökösök látványos csóváik és pályáik.</p>
+        <button class="close-btn mt-4 text-white/60 hover:text-white transition-colors md:hidden">Bezárás</button>
+      </div>
     </div>
   </div>
-
-  <!-- Kártya 2: Holdak -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="full-moon.png" alt="Holdak" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Holdak</h3>
-      <p class="text-white/80">A Föld és más bolygók holdjai, valamint felfedezésük.</p>
-    </div>
-  </div>
-
-  <!-- Kártya 3: Csillagok -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="star.png" alt="Csillagok" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Csillagok</h3>
-      <p class="text-white/80">Az égbolt fénylő csillagai és azok típusai.</p>
-    </div>
-  </div>
-
-  <!-- Kártya 4: Galaxisok -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="galaxy.png" alt="Galaxisok" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Galaxisok</h3>
-      <p class="text-white/80">Különböző galaxisok az univerzumban, például a Tejútrendszer.</p>
-    </div>
-  </div>
-
-  <!-- Kártya 5: Fekete lyukak -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="black-hole.png" alt="Fekete lyukak" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Fekete lyukak</h3>
-      <p class="text-white/80">Az univerzum legerősebb gravitációs objektumai.</p>
-    </div>
-  </div>
-
-  <!-- Kártya 6: Üstökösök -->
-  <div class="bg-white/10 backdrop-blur-md rounded-2xl shadow-lg border border-white/20 h-96 relative overflow-hidden group flex justify-center items-center">
-    <img src="meteor.png" alt="Üstökösök" class="w-56 h-56 object-contain transition-all duration-500 group-hover:opacity-0">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-      <h3 class="text-2xl font-bold text-white mb-2">Üstökösök</h3>
-      <p class="text-white/80">Az üstökösök látványos csóváik és pályáik.</p>
-    </div>
-  </div>
-</div>
-
-  
-</div>
-
 
   <script src="stars.js"></script>
   <script>
@@ -115,6 +116,78 @@
       const offset = -20; // feljebb tolja a scrollt, hogy a gomb ne látszódjon
       const top = target.getBoundingClientRect().top + window.scrollY + offset;
       window.scrollTo({ top, behavior: 'smooth' });
+    });
+
+    // Kártya interakció kezelése
+    const cards = document.querySelectorAll('.card');
+    
+    cards.forEach(card => {
+      const cardImage = card.querySelector('.card-image');
+      const cardContent = card.querySelector('.card-content');
+      const closeBtn = card.querySelector('.close-btn');
+      let isActive = false;
+
+      // Főfunkció a kártya állapotának váltására
+      function toggleCard() {
+        isActive = !isActive;
+        
+        if (isActive) {
+          cardImage.style.opacity = '0';
+          cardContent.style.opacity = '1';
+        } else {
+          cardImage.style.opacity = '1';
+          cardContent.style.opacity = '0';
+        }
+      }
+
+      // Kártya kattintás kezelése
+      card.addEventListener('click', (e) => {
+        // Ha a bezárás gombot nyomták meg, ne váltsa át a kártyát
+        if (e.target === closeBtn) return;
+        
+        toggleCard();
+      });
+
+      // Bezárás gomb külön kezelése
+      closeBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // megakadályozza a kártya click event-jét
+        
+        if (isActive) {
+          isActive = false;
+          cardImage.style.opacity = '1';
+          cardContent.style.opacity = '0';
+        }
+      });
+
+      // Desktop hover funkció megtartása
+      if (window.innerWidth >= 768) { // md breakpoint
+        card.addEventListener('mouseenter', () => {
+          if (!isActive) {
+            cardImage.style.opacity = '0';
+            cardContent.style.opacity = '1';
+          }
+        });
+
+        card.addEventListener('mouseleave', () => {
+          if (!isActive) {
+            cardImage.style.opacity = '1';
+            cardContent.style.opacity = '0';
+          }
+        });
+      }
+    });
+
+    // Responsive viselkedés kezelése ablak átméretezéskor
+    window.addEventListener('resize', () => {
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        const cardImage = card.querySelector('.card-image');
+        const cardContent = card.querySelector('.card-content');
+        
+        // Reset kártyák alapállapotba
+        cardImage.style.opacity = '1';
+        cardContent.style.opacity = '0';
+      });
     });
   </script>
 </body>
